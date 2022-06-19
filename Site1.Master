@@ -1,0 +1,67 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Site1.master.vb" Inherits="_2hlbureau.Site1" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        #form1
+        {
+            margin-bottom: 8px;
+        }
+        .header
+        {
+            height: 121px;
+        }
+        .style1
+        {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <div class="header" 
+            
+            <br 
+            
+            style="color: #FFFFFF; font-size: xx-large; background-color: #3399FF; font-weight: bolder; " />
+            <br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <span class="style1">2HL Bureau.Gestion du stocke</span></div>
+        <div style="width: 169px; height: 765px; margin-top: 0px; background-color: #3399FF">
+            <div style="height: 40px; width: 911px; margin-left: 169px">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+            
+  
+        </asp:ContentPlaceHolder>
+            </div>
+            <asp:Menu ID="Menu1" runat="server" 
+                style="margin-left: 27px; font-weight: 700; font-size: large; text-decoration: underline;" 
+                ForeColor="White" Height="180px" RenderingMode="Table" Width="113px">
+                <DynamicSelectedStyle BackColor="White" />
+                <DynamicItemTemplate>
+                    <%# Eval("Text") %>
+                </DynamicItemTemplate>
+                <Items>
+                    <asp:MenuItem Text="Acceuil" Value="Acceuil" NavigateUrl="~/acceuil.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Fournisseur" Value="Fournisseur" 
+                        NavigateUrl="~/Fournisseur.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Achat" Value="Achat"></asp:MenuItem>
+                    <asp:MenuItem Text="Vente" Value="Vente"></asp:MenuItem>
+                    <asp:MenuItem Text="Articles" Value="Articles"></asp:MenuItem>
+                </Items>
+                <StaticHoverStyle BackColor="White" BorderColor="White" BorderStyle="Solid" 
+                    ForeColor="#3399FF" />
+            </asp:Menu>
+        </div>
+        <br />
+    </div>
+    </form>
+</body>
+</html>
